@@ -9,7 +9,7 @@ function Factory() {
 
 Factory.prototype = {
 	buildProtocol : function(socket) {
-		return new rdp.net.layer.BufferLayer(socket, rdp.rdp.TPKT(new rdp.rdp.X224.Client()));
+		return new rdp.net.layer.BufferLayer(socket, new rdp.rdp.TPKT(new rdp.rdp.X224.Client()));
 	}
 };
 
