@@ -13,4 +13,4 @@ Factory.prototype = {
 	}
 };
 
-new rdp.net.Reactor(new Factory()).connect('127.0.0.1', 33390);
+new rdp.net.Reactor(new Factory()).connect('127.0.0.1', 33389);
