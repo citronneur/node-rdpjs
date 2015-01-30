@@ -9,8 +9,8 @@ function Factory() {
 
 Factory.prototype = {
 	buildProtocol : function(socket) {
-		return new rdp.net.layer.BufferLayer(socket, new rdp.rdp.TPKT(new rdp.rdp.X224.Client()));
+		return new rdp.core.layer.BufferLayer(socket, new rdp.rdp.TPKT(new rdp.rdp.X224.Client()));
 	}
 };
 
-new rdp.net.Reactor(new Factory()).connect('127.0.0.1', 33389);
+new rdp.core.Reactor(new Factory()).connect('wav-glw-009', 3389);
