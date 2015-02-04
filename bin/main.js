@@ -13,4 +13,4 @@ Factory.prototype = {
 	}
 };
 
-new rdp.core.Reactor(new Factory()).connect('wav-glw-009', 3389);
+new rdp.core.Reactor(new Factory()).connect('54.187.36.238', 3389);
