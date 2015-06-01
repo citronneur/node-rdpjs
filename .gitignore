@@ -1,3 +1,4 @@
 .project
 README.md~
 npm_modules/*
+.settings/*
