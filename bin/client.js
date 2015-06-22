@@ -4,4 +4,4 @@
 var rdp = require("../lib");
 
 
-rdp.createClient({ domain : 'siradel', userName : 'speyrefitte', password : 'toto'}).connect('totem3', 3389);
+rdp.createClient({ domain : 'siradel', userName : 'speyrefitte'}).connect('wav-glw-009', 3389);
