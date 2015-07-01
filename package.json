@@ -1,0 +1,23 @@
+{
+	"name": "node-rdp",
+	"version": "0.1.0",
+	"engines": 
+	[
+		"node = 0.10.x"
+	],
+
+	"description": "Remote Desktop Protocol in Node.js",
+	"license": "GPL",
+	"repository": 
+	{
+		"type": "git",
+		"url": "https://github.com/citronneur/node-rdp"
+	},
+
+	"main": "server.js",
+	"dependencies": 
+	{
+		"starttls": "lastest",
+		"bignum": "lastest"
+	}
+}
