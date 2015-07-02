@@ -34,6 +34,7 @@ var client = rdp.createClient({
 	password : 'my_password',
 	enablePerf : true,
 	autoLogin : true,
+	decompress : false,
 	screen : { width : 800, height : 600 }
 }).on('connect', function () {
 }).on('close', function() {
@@ -42,7 +43,17 @@ var client = rdp.createClient({
 }).connect('XXX.XXX.XXX.XXX', 3389);
 ```
 
-Most of bitmap are encoded with RLE (Run Length Encoding) algorithm. It's not the purpose of node-rdp to embed decompression algorithm. See mstsc.js to see a pure javascript implementation (for browser).
+Name | type | Description
+-----|------|------------
+domain|string|Microsoft domain
+userName|string|Username
+password|string|password
+enablePerf|boolean|Active some performance features (disable wallpaper)
+autoLogin|boolean|start session if login informations are good
+decompress|boolean|use RLE algorrithm for decompress bitmap
+screen|object|{width : integer, height : integer} screen size
+
+Use decompress parameter may decrease performance.
 
 ### Client Events
 
