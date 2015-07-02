@@ -118,10 +118,14 @@ client.sendKeyEventUnicode(code, isPressed);
 * code {integer} unicode char of key
 * isPressed {boolean} true for a key pressed event
 
+## Project
+
+Please see [**mstsc.js**](https://github.com/citronneur/mstsc.js) project page to watch an exemple of node-rdp.
+
 ## Roadmap
 
 * Protocol server side
-* NLA Authentication
-* RDp security layer for windows xp compatibility
+* NLA Authentication security layer
+* RDP security layer for windows xp compatibility
 * Win32 orders
 * RemoteFX (H.264) codec
