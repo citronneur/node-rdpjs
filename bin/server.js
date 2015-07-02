@@ -4,6 +4,9 @@
 var rdp = require("../lib");
 
 
-rdp.createServer({}, function (server) {
+rdp.createServer({
+	key : '/home/sylvain/dev/node-rdp-cert/ryans-key.pem',
+	cert : '/home/sylvain/dev/node-rdp-cert/ryans-cert.pem'
+}, function (server) {
 	
-}).listen(33389);
+}).listen(33390);
