@@ -43,15 +43,17 @@ var client = rdp.createClient({
 }).connect('XXX.XXX.XXX.XXX', 3389);
 ```
 
-Name | type | Description
------|------|------------
-domain|string|Microsoft domain
-userName|string|Username
-password|string|password
-enablePerf|boolean|Active some performance features (disable wallpaper)
-autoLogin|boolean|start session if login informations are good
-decompress|boolean|use RLE algorrithm for decompress bitmap
-screen|object|{width : integer, height : integer} screen size
+Client parameters
+
+* domain {string} Microsoft domain
+* userName {string} Username
+* password {string} password
+* enablePerf {boolean} Active some performance features (disable wallpaper)
+* autoLogin {boolean} start session if login informations are good
+* decompress {boolean} use RLE algorrithm for decompress bitmap
+* screen {object} screen size
+** width {integer} width of screen
+** height {integer} height of screen
 
 Use decompress parameter may decrease performance.
 
