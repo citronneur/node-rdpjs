@@ -1,23 +1,23 @@
-node-rdp
+node-rdpjs
 ========
 
 Remote Desktop Protocol for Node.js
 
-node-rdp is a pure implementation of the Microsoft RDP (Remote Desktop Protocol) protocol (client and server side). node-rdp support only SSL security layer.
+node-rdpjs is a pure implementation of the Microsoft RDP (Remote Desktop Protocol) protocol (client and server side). node-rdpjs support only SSL security layer.
 
 ## Install
 
-You can install last release node-rdp through npm :
+You can install last release node-rdpjs through npm :
 
 ```
-npm install node-rdp
+npm install node-rdpjs
 ```
 
 Or work with dev branch :
 
 ```
-git clone https://github.com/citronneur/node-rdp.git
-cd node-rdp
+git clone https://github.com/citronneur/node-rdpjs.git
+cd node-rdpjs
 npm install
 ```
 
@@ -120,7 +120,7 @@ client.sendKeyEventUnicode(code, isPressed);
 
 ## Project
 
-Please see [**mstsc.js**](https://github.com/citronneur/mstsc.js) project page to watch an exemple of node-rdp.
+Please see [**mstsc.js**](https://github.com/citronneur/mstsc.js) project page to watch an exemple of node-rdpjs.
 
 ## Roadmap
 

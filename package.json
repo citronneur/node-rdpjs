@@ -1,5 +1,5 @@
 {
-	"name": "node-rdp",
+	"name": "node-rdpjs",
 	"version": "0.1.0",
 	"engines": 
 	[
@@ -11,7 +11,7 @@
 	"repository": 
 	{
 		"type": "git",
-		"url": "https://github.com/citronneur/node-rdp"
+		"url": "https://github.com/citronneur/node-rdpjs"
 	},
 
 	"main": "lib/index.js",

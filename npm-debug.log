@@ -1,43 +1,93 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'login' ]
-2 info using npm@1.3.10
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.12.1
 3 info using node@v0.10.25
-4 warn Email must be an email address
-5 verbose adduser before first PUT { name: 'citronneur',
-5 verbose adduser   salt: 'XXXXX',
-5 verbose adduser   password_sha: 'XXXXX',
-5 verbose adduser   email: 'citronneur@gmail.com',
-5 verbose adduser   _id: 'org.couchdb.user:citronneur',
-5 verbose adduser   type: 'user',
-5 verbose adduser   roles: [],
-5 verbose adduser   date: '2015-07-06T15:31:15.033Z' }
-6 verbose url raw /-/user/org.couchdb.user:citronneur
-7 verbose url resolving [ 'https://registry.npmjs.org/',
-7 verbose url resolving   './-/user/org.couchdb.user:citronneur' ]
-8 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:citronneur
-9 info trying registry request attempt 1 at 17:31:15
-10 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:citronneur
-11 http 400 https://registry.npmjs.org/-/user/org.couchdb.user:citronneur
-12 verbose adduser back [ [Error: Unknown error while authenticating : -/user/org.couchdb.user:citronneur],
-12 verbose adduser   { ok: false, error: 'Unknown error while authenticating' },
-12 verbose adduser   '{"ok":false,"error":"Unknown error while authenticating"}' ]
-13 error Error: Unknown error while authenticating : -/user/org.couchdb.user:citronneur
-13 error     at RegClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:272:14)
-13 error     at Request.self.callback (/usr/lib/nodejs/request/index.js:148:22)
-13 error     at Request.EventEmitter.emit (events.js:98:17)
-13 error     at Request.<anonymous> (/usr/lib/nodejs/request/index.js:896:14)
-13 error     at Request.EventEmitter.emit (events.js:117:20)
-13 error     at IncomingMessage.<anonymous> (/usr/lib/nodejs/request/index.js:847:12)
-13 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
-13 error     at _stream_readable.js:920:16
-13 error     at process._tickCallback (node.js:415:13)
-14 error If you need help, you may report this log at:
-14 error     <http://github.com/isaacs/npm/issues>
-14 error or email it to:
-14 error     <npm-@googlegroups.com>
-15 error System Linux 3.13.0-32-generic
-16 error command "/usr/bin/nodejs" "/usr/bin/npm" "login"
-17 error cwd /home/speyrefitte/dev/workspace/node-rdp
-18 error node -v v0.10.25
-19 error npm -v 1.3.10
-20 verbose exit [ 1, true ]
+4 verbose node symlink /usr/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/home/speyrefitte/dev/workspace/node-rdp',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /home/speyrefitte/.npm/node-rdp/0.1.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/home/speyrefitte/.npm/node-rdp/0.1.0/package.tgz',
+10 verbose tar pack   '/home/speyrefitte/dev/workspace/node-rdp' ]
+11 verbose tarball /home/speyrefitte/.npm/node-rdp/0.1.0/package.tgz
+12 verbose folder /home/speyrefitte/dev/workspace/node-rdp
+13 info prepublish node-rdp@0.1.0
+14 verbose addLocalTarball adding from inside cache /home/speyrefitte/.npm/node-rdp/0.1.0/package.tgz
+15 silly cache afterAdd node-rdp@0.1.0
+16 verbose afterAdd /home/speyrefitte/.npm/node-rdp/0.1.0/package/package.json not in flight; writing
+17 verbose afterAdd /home/speyrefitte/.npm/node-rdp/0.1.0/package/package.json written
+18 silly publish { name: 'node-rdp',
+18 silly publish   version: '0.1.0',
+18 silly publish   engines: [ 'node = 0.10.x' ],
+18 silly publish   description: 'Remote Desktop Protocol in Node.js',
+18 silly publish   license: 'GPL',
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/citronneur/node-rdp.git' },
+18 silly publish   main: 'lib/index.js',
+18 silly publish   dependencies: { starttls: 'lastest', bignum: 'lastest' },
+18 silly publish   readme: 'node-rdp\n========\n\nRemote Desktop Protocol for Node.js\n\nnode-rdp is a pure implementation of the Microsoft RDP (Remote Desktop Protocol) protocol (client and server side). node-rdp support only SSL security layer.\n\n## Install\n\nYou can install last release node-rdp through npm :\n\n```\nnpm install node-rdp\n```\n\nOr work with dev branch :\n\n```\ngit clone https://github.com/citronneur/node-rdp.git\ncd node-rdp\nnpm install\n```\n\n## RDP Client\n\nTo create a simple rdp client : \n\n```javascript\nvar rdp = require(\'rdp\');\n\nvar client = rdp.createClient({ \n\tdomain : \'my_domain\', \n\tuserName : \'my_username\',\n\tpassword : \'my_password\',\n\tenablePerf : true,\n\tautoLogin : true,\n\tdecompress : false,\n\tscreen : { width : 800, height : 600 }\n}).on(\'connect\', function () {\n}).on(\'close\', function() {\n}).on(\'bitmap\', function(bitmap) {\n}).on(\'error\', function(err) {\n}).connect(\'XXX.XXX.XXX.XXX\', 3389);\n```\n\nClient parameters\n\n* domain {string} Microsoft domain\n* userName {string} Username\n* password {string} password\n* enablePerf {boolean} Active some performance features (disable wallpaper)\n* autoLogin {boolean} start session if login informations are good\n* decompress {boolean} use RLE algorrithm for decompress bitmap\n* screen {object} screen size\n** width {integer} width of screen\n** height {integer} height of screen\n\nUse decompress parameter may decrease performance.\n\n### Client Events\n\nList of all available events from server\n\n#### connect\n\nConnect event is received when rdp stack is connected\n\n#### close\n\nClose event is received when rdp stack is close cleanly\n\n#### error\n\nError event is received when a protocol error happened\n\n#### bitmap\n\nBitmap event is received for a bitmap refresh order :\n\n* destTop {integer} y min position\n* destLeft {integer} x min position\n* destBottom {integer} y max position\n* destRight {integer} x max position \n* width {integer} width of bitmap data\n* height {integer} height of bitmap data\n* bitsPerPixel {integer} [15|16|24|32] bits per pixel\n* isCompress {boolean} true if bitmap is compressed with RLE algorithm\n* data : {Buffer} bitmap data\n\n### Client Inputs\n\nClient inputs are mainly user inputs (mouse and keyboard).\n\n#### Mouse\n\n```javascript\nclient.sendPointerEvent(x, y, button, isPressed);\n```\n\n* x {integer} mouse x position in pixel\n* y {integer} mouse y position in pixel\n* button {integer} [ 1 (left) | 2 (right) | 3 (middle) ]\n* isPressed {boolean} true for a pressed button event\n\n#### Keyboard\n\n```javascript\nclient.sendKeyEventScancode(code, isPressed);\n```\n\n* code {integer} scancode of key\n* isPressed {boolean} true for a key pressed event\n\n```javascript\nclient.sendKeyEventUnicode(code, isPressed);\n```\n\n* code {integer} unicode char of key\n* isPressed {boolean} true for a key pressed event\n\n## Project\n\nPlease see [**mstsc.js**](https://github.com/citronneur/mstsc.js) project page to watch an exemple of node-rdp.\n\n## Roadmap\n\n* Protocol server side\n* NLA Authentication security layer\n* RDP security layer for windows xp compatibility\n* Win32 orders\n* RemoteFX (H.264) codec\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '6953ea035c94773520df80d17facb0fda7dd969c',
+18 silly publish   bugs: { url: 'https://github.com/citronneur/node-rdp/issues' },
+18 silly publish   homepage: 'https://github.com/citronneur/node-rdp#readme',
+18 silly publish   _id: 'node-rdp@0.1.0',
+18 silly publish   scripts: {},
+18 silly publish   _shasum: '58e516963f489df66e04541024e3a5e7b6b61d38',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name node-rdp
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/node-rdp
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /home/speyrefitte/.npm/node-rdp/0.1.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/node-rdp
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 17:46:10
+29 verbose request using bearer token for auth
+30 verbose request id 78f2919aad36b25b
+31 http request PUT https://registry.npmjs.org/node-rdp
+32 http 403 https://registry.npmjs.org/node-rdp
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=60',
+33 verbose headers   'content-length': '100',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Mon, 06 Jul 2015 15:46:26 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-ams4138-AMS',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1436197585.275420,VS0,VE1095' }
+34 verbose request invalidating /home/speyrefitte/.npm/registry.npmjs.org/node-rdp on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You do not have permission to publish 'node-rdp'. Are you logged in as the correct user? : node-rdp
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:197:22)
+36 verbose stack     at Request.EventEmitter.emit (events.js:98:17)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1050:14)
+36 verbose stack     at Request.EventEmitter.emit (events.js:117:20)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:996:12)
+36 verbose stack     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+36 verbose stack     at _stream_readable.js:920:16
+36 verbose stack     at process._tickCallback (node.js:415:13)
+37 verbose statusCode 403
+38 verbose pkgid node-rdp
+39 verbose cwd /home/speyrefitte/dev/workspace/node-rdp
+40 error Linux 3.13.0-32-generic
+41 error argv "node" "/usr/local/bin/npm" "publish"
+42 error node v0.10.25
+43 error npm  v2.12.1
+44 error code E403
+45 error You do not have permission to publish 'node-rdp'. Are you logged in as the correct user? : node-rdp
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
