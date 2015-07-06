@@ -1,23 +1,18 @@
 {
-	"name": "node-rdpjs",
-	"version": "0.1.0",
-	"engines": 
-	[
-		"node = 0.10.x"
-	],
-
-	"description": "Remote Desktop Protocol in Node.js",
-	"license": "GPL",
-	"repository": 
-	{
-		"type": "git",
-		"url": "https://github.com/citronneur/node-rdpjs"
-	},
-
-	"main": "lib/index.js",
-	"dependencies": 
-	{
-		"starttls": "lastest",
-		"bignum": "lastest"
-	}
+  "name": "node-rdpjs",
+  "version": "0.1.0",
+  "engines": [
+    "node = 0.10.x"
+  ],
+  "description": "Remote Desktop Protocol in Node.js",
+  "license": "GPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/citronneur/node-rdpjs"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "bignum": "^0.10.2",
+    "starttls": "^1.0.0"
+  }
 }
