@@ -14,7 +14,7 @@
 		"url": "https://github.com/citronneur/node-rdp"
 	},
 
-	"main": "server.js",
+	"main": "lib/index.js",
 	"dependencies": 
 	{
 		"starttls": "lastest",

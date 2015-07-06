@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'login' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 warn Email must be an email address
+5 verbose adduser before first PUT { name: 'citronneur',
+5 verbose adduser   salt: 'XXXXX',
+5 verbose adduser   password_sha: 'XXXXX',
+5 verbose adduser   email: 'citronneur@gmail.com',
+5 verbose adduser   _id: 'org.couchdb.user:citronneur',
+5 verbose adduser   type: 'user',
+5 verbose adduser   roles: [],
+5 verbose adduser   date: '2015-07-06T15:31:15.033Z' }
+6 verbose url raw /-/user/org.couchdb.user:citronneur
+7 verbose url resolving [ 'https://registry.npmjs.org/',
+7 verbose url resolving   './-/user/org.couchdb.user:citronneur' ]
+8 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:citronneur
+9 info trying registry request attempt 1 at 17:31:15
+10 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:citronneur
+11 http 400 https://registry.npmjs.org/-/user/org.couchdb.user:citronneur
+12 verbose adduser back [ [Error: Unknown error while authenticating : -/user/org.couchdb.user:citronneur],
+12 verbose adduser   { ok: false, error: 'Unknown error while authenticating' },
+12 verbose adduser   '{"ok":false,"error":"Unknown error while authenticating"}' ]
+13 error Error: Unknown error while authenticating : -/user/org.couchdb.user:citronneur
+13 error     at RegClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:272:14)
+13 error     at Request.self.callback (/usr/lib/nodejs/request/index.js:148:22)
+13 error     at Request.EventEmitter.emit (events.js:98:17)
+13 error     at Request.<anonymous> (/usr/lib/nodejs/request/index.js:896:14)
+13 error     at Request.EventEmitter.emit (events.js:117:20)
+13 error     at IncomingMessage.<anonymous> (/usr/lib/nodejs/request/index.js:847:12)
+13 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+13 error     at _stream_readable.js:920:16
+13 error     at process._tickCallback (node.js:415:13)
+14 error If you need help, you may report this log at:
+14 error     <http://github.com/isaacs/npm/issues>
+14 error or email it to:
+14 error     <npm-@googlegroups.com>
+15 error System Linux 3.13.0-32-generic
+16 error command "/usr/bin/nodejs" "/usr/bin/npm" "login"
+17 error cwd /home/speyrefitte/dev/workspace/node-rdp
+18 error node -v v0.10.25
+19 error npm -v 1.3.10
+20 verbose exit [ 1, true ]
