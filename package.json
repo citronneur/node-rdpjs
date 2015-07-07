@@ -1,6 +1,7 @@
 {
   "name": "node-rdpjs",
-  "version": "0.1.1",
+  "author": "Sylvain Peyrefitte",
+  "version": "0.2.0",
   "engines": [
     "node = 0.10.x"
   ],

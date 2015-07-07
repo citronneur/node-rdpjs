@@ -35,7 +35,9 @@ var client = rdp.createClient({
 	enablePerf : true,
 	autoLogin : true,
 	decompress : false,
-	screen : { width : 800, height : 600 }
+	screen : { width : 800, height : 600 },
+	locale : 'en',
+	logLevel : 'INFO'
 }).on('connect', function () {
 }).on('close', function() {
 }).on('bitmap', function(bitmap) {
@@ -43,7 +45,7 @@ var client = rdp.createClient({
 }).connect('XXX.XXX.XXX.XXX', 3389);
 ```
 
-Client parameters
+Client parameters :
 
 * domain {string} Microsoft domain
 * userName {string} Username
@@ -52,8 +54,16 @@ Client parameters
 * autoLogin {boolean} start session if login informations are good
 * decompress {boolean} use RLE algorrithm for decompress bitmap
 * screen {object} screen size
-** width {integer} width of screen
-** height {integer} height of screen
+	- width {integer} width of screen
+	- height {integer} height of screen
+* locale {string} keyboard layout
+	- en qwerty layout
+	- fr azerty layout
+* logLevel {string} console log level of library
+	- DEBUG
+	- INFO
+	- WARN
+	- ERROR
 
 Use decompress parameter may decrease performance.
 

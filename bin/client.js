@@ -4,4 +4,4 @@
 var rdp = require("../lib");
 
 
-rdp.createClient({ domain : 'siradel', userName : 'speyrefitte', decompress : true}).connect('54.187.36.238', 3389);
+rdp.createClient({ domain : 'siradel', userName : 'speyrefitte', decompress : false, logLevel : 'INFO'}).connect('172.16.1.62', 3389);
