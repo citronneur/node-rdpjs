@@ -130,7 +130,7 @@ client.sendKeyEventUnicode(code, isPressed);
 
 ## Project
 
-Please see [**mstsc.js**](https://github.com/citronneur/mstsc.js) project page to watch an exemple of node-rdpjs.
+Please see [**mstsc.js**](https://github.com/citronneur/mstsc.js) project page to watch an example of node-rdpjs.
 
 ## Roadmap
 
