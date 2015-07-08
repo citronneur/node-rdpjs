@@ -26,7 +26,7 @@ npm install
 To create a simple rdp client : 
 
 ```javascript
-var rdp = require('rdp');
+var rdp = require('node-rdpjs');
 
 var client = rdp.createClient({ 
 	domain : 'my_domain', 
@@ -65,7 +65,7 @@ Client parameters :
 	- WARN
 	- ERROR
 
-Use decompress parameter may decrease performance.
+Use of decompress parameter impact performance.
 
 ### Client Events
 
