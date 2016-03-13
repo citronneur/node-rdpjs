@@ -1,7 +1,7 @@
 {
   "name": "node-rdpjs",
   "author": "Sylvain Peyrefitte",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "engines": [
     "node = 0.10.x"
   ],
@@ -14,6 +14,6 @@
   "main": "lib/index.js",
   "dependencies": {
     "starttls": "^1.0.0",
-    "bignum": "^0.11.0"
+    "lodash": "3.3.0"
   }
 }
