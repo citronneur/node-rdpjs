@@ -1,3 +1,6 @@
+## 0.4.0 - 20200507
+* Updates for newer NodeJS versions (>= 9.x, migrate deprecated functions to new ones)
+
 ## 0.2.1 - 20150708
 * Minor bug fix
 
